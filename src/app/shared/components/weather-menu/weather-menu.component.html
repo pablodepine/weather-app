@@ -1,26 +1,29 @@
 <div class="container">
-  <!-- <button
-    mat-icon-button
-    color="primary"
-    aria-label="Example icon button with a home icon"
-  >
-    <mat-icon>home</mat-icon>
-  </button> -->
-  <div class="weather-content">
-    <div class="weather-icon"></div>
-    <p class="weather-description">
-      {{ dadosCidade.weather[0].description.toUpperCase() }}
-    </p>
-  </div>
-
-  <div class="weather-advanced-description">
-    <div>
-      A temperatura atual em {{ dadosCidade.name }} é de
-      {{ dadosCidade.main.temp }}ºC
+  <div class="content">
+    <div class="weather-content">
+      <div class="weather-icon"></div>
+      <div class="weather-temperature">
+        <div>
+          <mat-icon color="primary">arrow_downward</mat-icon>Mín:
+          {{ dadosCidade.main.temp_min }}ºC
+        </div>
+        <div>
+          <mat-icon color="warn">arrow_upward</mat-icon>Máx:
+          {{ dadosCidade.main.temp_min }}ºC
+        </div>
+      </div>
     </div>
-    <div>Sensação térmica de {{ dadosCidade.main.feels_like }}ºC</div>
-    <div>Mín: {{ dadosCidade.main.temp_min }}ºC</div>
-    <div>Máx: {{ dadosCidade.main.temp_min }}ºC</div>
-    <div>Umidade: {{ dadosCidade.main.humidity }}%</div>
+
+    <div class="weather-advanced-description">
+      <div>
+        O tempo em Rodeio está {{ dadosCidade.weather[0].description }}. A
+        temperatura atual é de {{ dadosCidade.main.temp }}ºC
+      </div>
+      <div>Sensação térmica de {{ dadosCidade.main.feels_like }}ºC</div>
+      <div>
+        Umidade:
+        {{ dadosCidade.main.humidity }}%
+      </div>
+    </div>
   </div>
 </div>

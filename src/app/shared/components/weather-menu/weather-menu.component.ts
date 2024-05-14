@@ -14,7 +14,6 @@ export class WeatherMenuComponent implements OnInit {
   @Input() dadosCidade!: Cidade;
 
   ngOnInit(): void {
-    console.log(this.dadosCidade);
     this.setaIconeClima();
     this.ajustaCasaDecimal();
   }
