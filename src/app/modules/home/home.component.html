@@ -1,0 +1,29 @@
+@if(!weatherMenuIsOpen) {
+<div class="container">
+  <div class="content">
+    <div class="content-texts">
+      <div class="content-text-1">Como está</div>
+      <div class="content-text-2">o tempo em</div>
+    </div>
+    <div class="content-form-container">
+      <form [formGroup]="cidadeForm">
+        <input type="text" formControlName="cidade" />
+        @if(cidadeForm.touched && cidadeForm.invalid){
+        <div class="content-form-error">Por favor, preencha este campo.</div>
+        }
+      </form>
+    </div>
+    <div class="content-button">
+      <button
+        mat-stroked-button
+        color="primary"
+        (click)="pesquisaGeolocalizacaoCidade()"
+      >
+        Pesquisar
+      </button>
+    </div>
+  </div>
+</div>
+} @else {
+<app-weather-menu [dadosCidade]="dadosCidade"></app-weather-menu>
+}

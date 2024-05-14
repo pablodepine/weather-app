@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+
+  .content {
+    height: 8rem;
+    width: 33rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .content-texts {
+      width: 50%;
+
+      .content-text-1{
+        font-size: 38pt;
+      }
+      .content-text-2{
+        font-size: 20pt;
+      }
+    }
+
+    .content-form-container {
+      .content-form-error {
+        color: rgb(145, 62, 62)
+      }
+    }
+
+    .content-button {
+      text-align: center;
+      margin-left: 4rem;
+    }
+  }
+}
+
+
+input[type="text"], input[type="cidade"], textarea {
+  width: 100%; /* Faz com que os campos ocupem toda a largura do formulário */
+  padding: 10px; /* Adiciona um pouco de espaço interno para tornar o texto mais legível */
+  font-size: 18pt;
+}
