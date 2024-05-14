@@ -1,7 +1,7 @@
 export interface Cidade {
   name: string;
   weather: Clima[];
-  main: DadosAvancados;
+  main: DadosDetalhados;
 }
 
 export interface Clima {
@@ -11,7 +11,7 @@ export interface Clima {
   icon: string;
 }
 
-export interface DadosAvancados {
+export interface DadosDetalhados {
   temp: number;
   feels_like: number;
   temp_min: number;
