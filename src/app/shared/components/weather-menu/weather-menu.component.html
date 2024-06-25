@@ -1,4 +1,5 @@
 <div class="container">
+  Voltar
   <div class="content">
     <div class="weather-content">
       <div class="weather-icon"></div>
@@ -15,15 +16,17 @@
     </div>
 
     <div class="weather-advanced-description">
-      <div>
-        O tempo em Rodeio está {{ dadosCidade.weather[0].description }}. A
-        temperatura atual é de {{ dadosCidade.main.temp }}ºC
-      </div>
-      <div>Sensação térmica de {{ dadosCidade.main.feels_like }}ºC</div>
-      <div>
+      <p>
+        O tempo em {{ dadosCidade.name }} atualmente está
+        {{ dadosCidade.weather[0].description }}.
+      </p>
+      <p>A temperatura atual é de {{ dadosCidade.main.temp }}ºC</p>
+
+      <p>Sensação térmica de {{ dadosCidade.main.feels_like }}ºC</p>
+      <p>
         Umidade:
         {{ dadosCidade.main.humidity }}%
-      </div>
+      </p>
     </div>
   </div>
 </div>
